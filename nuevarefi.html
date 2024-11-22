@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Inventory</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<br><br><br><br><br>
+<body>
+
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <ul>
+            <li><a href="uno.html">Inicio</a></li>
+            <li><a href="egasolineras.html">Envios a gasolineras</a></li>
+            <li><a href="erefinerias.html">Entregas a refinerías</a></li>
+            <li><a href="nuevagaso.html">Registrar nueva gasolinera</a></li>
+            <li><a href="nuevarefi.html">Registrar nueva refinería</a></li>
+            <li><a href="tele_mer.html">📞 Teléfonos de emergencia</a></li>
+        </ul>
+    </div>
+<center>
+
+    
+
+<div class="form-container" id="refinerias">
+    <h2>Registrar datos de una nueva refinería</h2>
+    <form action="conexion_nuevaref.php" method="post">
+         <h2>Información general</h2>
+        <label for="nom_r">Nombre de la Refinería :</label>
+        <input type="text" id="nom_r" name="nom_r" required><br>
+
+        <label for="raz_soc">Razón Social:</label>
+        <input type="text" id="raz_soc" name="raz_soc" required><br>
+
+        <label for="num_id">Número de identificación :</label>
+        <input type="varchar" id="num_id" name="num_id" placeholder="12 digitos" required><br>
+
+        <label for="dir_comp">Dirección completa:</label>
+        <input type="varchar" id="dir_comp" name="dir_comp" required ><br>
+
+        <label for="tel_cont">Teléfono de contacto:</label>
+        <input type="varchar" id="tel_cont" name="tel_cont" required><br>
+        
+        <h2>DATOS OPERATIVOS</h2>
+        <label for="cpd">Capacidad de procesamiento diario:</label>
+        <input type="text" id="cpd" name="cpd" placeholder="Barriles por día"required><br>
+
+        <label for="pdp">Productos derivados que se producen:</label>
+        <input type="text" id="pdp" name="pdp" required><br>
+
+        <label for="fmp">Fuente de materia prima:</label>
+        <input type="text" id="fmp" name="fmp" placeholder="Algún tipo de crudo, yacimiento, proovedor" required><br>
+
+        <label for="c_procesamiento">Cantidad de unidades de procesamiento: </label>
+        <input type="number" id="c_procesamiento" name="c_procesamiento" placeholder="plantas de destilación, hidrotratamiento"  required><br>
+
+        <label for="c_almacenamiento">Capacidad de almacenamiento: </label>
+        <input type="varchar" id="c_almacenamiento" name="c_almacenamiento" 
+        placeholder="En barriles o litros" required><br>
+
+       <h2>DATOS LEGALES </h2>
+        <label for="licencia">Número de licencia o permiso de operación </label>
+        <input type="varchar" id="licencia" name="licencia" placeholder="nM-20245-RR" required><br>
+
+        <label for="fecha_v">Fecha de vencimiento del permiso:</label>
+        <input type="date" id="fecha_v" name="fecha_v" required><br>
+
+        <label for="res_leg">Responsable legal:</label>
+        <input type="text" id="res_leg" name="res_leg" required><br>
+
+        <label for="reg_ambiental">Número de registro ambiental:</label>
+        <input type="varchar" id="reg_ambiental" name="reg_ambiental" placeholder="12 digitos" required><br>
+
+        <label for="num_tratamiento">Número de plantas de tratamiento de residuos o tratamiento:</label>
+        <input type="varchar" id="num_tratamiento" name="num_tratamiento" placeholder="Aclarar el número y tipo de planta de tratamiento" required><br>
+<br>
+        <button type="submit">Agregar</button>
+    </form>
+</div></center>
+
+</body>
+</html>

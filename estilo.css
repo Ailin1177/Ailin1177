@@ -1,0 +1,134 @@
+/* Configuración del fondo y el título */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRleHR1cmElMjBhenVsJTIwb3NjdXJvfGVufDB8fDB8fHww');
+    background-size: cover;
+    color: #ffffff;
+}
+
+.titulo {
+    color: #ffffff;
+    margin-top: 100px; /* Aumentado para evitar superposición con la barra de navegación */
+    text-align: center;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwnAHvG6KawBrurMxWlatdE4wr8HhDfn2gYA&s'); /* Ajuste de opacidad para mejorar el contraste */
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: -100px; /* Empieza fuera de la pantalla */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 10;
+    animation: slideFadeIn 1s ease forwards, glowPulse 3s ease-in-out infinite; /* Animación de entrada y resplandor */
+}
+
+/* Animación de deslizamiento y desvanecimiento */
+@keyframes slideFadeIn {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: 25px; /* Posición final más baja */
+        opacity: 1;
+    }
+}
+
+/* Animación de resplandor pulsante */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+/* Estilos y animación de los enlaces */
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+/* Efecto hover en los enlaces */
+.navbar a:hover {
+    color: #00ccff; /* Color de resplandor al pasar el cursor */
+    box-shadow: 0 0 8px #00ccff, 0 0 15px #00ccff;
+    transform: scale(1.1); /* Zoom leve */
+}
+
+.form-container {
+    background-color: rgba(0, 0, 30, 0.5); /* Fondo semitransparente para contraste */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra más suave */
+    margin: 20px auto 20px; /* Centra el contenedor y agrega espacio superior */
+    max-width: 500px; /* Ancho máximo para pantallas grandes */
+    color: #ffffff; /* Color de texto blanco para contraste */
+}
+
+/* Estilos adicionales para el formulario */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #00ccff; /* Color del título */
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a4f99;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #0099cc; /* Color más oscuro al hacer hover */
+}
